@@ -1,0 +1,83 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ex5_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_2 {H:/VERI/part_2/counter_8.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:07 on Nov 19,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+H:/VERI/part_2" H:/VERI/part_2/counter_8.v 
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# End time: 09:43:07 on Nov 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.counter_8
+# vsim -gui -l msim_transcript work.counter_8 
+# Start time: 09:43:24 on Nov 19,2019
+# Loading work.counter_8
+add wave clock enable
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+add wave clock
+# (vish-4014) No objects found matching 'clock'.
+add wave clock enable
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+add wave -hexadecimal count
+add wave clock enable
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+vsim -gui -l msim_transcript work.counter_8
+# End time: 09:45:56 on Nov 19,2019, Elapsed time: 0:02:32
+# Errors: 4, Warnings: 0
+# vsim -gui -l msim_transcript work.counter_8 
+# Start time: 09:45:56 on Nov 19,2019
+# Loading work.counter_8
+add wave clock enable
+add wave -hexadecimal count
+force clock 0 0, 1 10ns -repeat 20ns
+force enable 1
+run 100ns
+restart
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'nable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'nable'.
+#     while executing
+# "add wave clock nable"
+restart
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'nable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'nable'.
+#     while executing
+# "add wave clock nable"
+restart
+do ./tb_counter.do
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+# End time: 09:55:41 on Nov 19,2019, Elapsed time: 0:09:45
+# Errors: 6, Warnings: 0

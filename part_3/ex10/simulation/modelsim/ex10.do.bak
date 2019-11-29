@@ -1,0 +1,5 @@
+add wave clk enable
+add wave data_in 10'h23b
+add wave force clock 0 0, 1 10ns -repeat 20ns
+force load 1
+run 100ns

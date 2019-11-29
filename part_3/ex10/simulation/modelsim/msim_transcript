@@ -1,0 +1,59 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ex10_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/mylib {H:/VERI/mylib/tick_5000.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:06:14 on Nov 26,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+H:/VERI/mylib" H:/VERI/mylib/tick_5000.v 
+# -- Compiling module tick_50000
+# 
+# Top level modules:
+# 	tick_50000
+# End time: 11:06:14 on Nov 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/ex10 {H:/VERI/part_3/ex10/spi2dac.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:06:14 on Nov 26,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+H:/VERI/part_3/ex10" H:/VERI/part_3/ex10/spi2dac.v 
+# -- Compiling module spi2dac
+# 
+# Top level modules:
+# 	spi2dac
+# End time: 11:06:15 on Nov 26,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/ex10 {H:/VERI/part_3/ex10/ex10_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:06:15 on Nov 26,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+H:/VERI/part_3/ex10" H:/VERI/part_3/ex10/ex10_top.v 
+# -- Compiling module ex10_top
+# 
+# Top level modules:
+# 	ex10_top
+# End time: 11:06:15 on Nov 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.ex10_top
+# vsim work.ex10_top 
+# Start time: 11:06:45 on Nov 26,2019
+# Loading work.ex10_top
+# Loading work.tick_50000
+# Loading work.spi2dac
+add wave clk
+# (vish-4014) No objects found matching 'clk'.
+add wave CLOCK_50
+add wave SW
+force clock 0 0, 1 10ns -repeat 20ns
+# ** Error (suppressible): (vsim-4008) Object 'clock' not found.
+# 
+force CLOCK_50 0 0, 1 10ns -repeat 20ns
+# End time: 11:22:49 on Nov 26,2019, Elapsed time: 0:16:04
+# Errors: 2, Warnings: 0

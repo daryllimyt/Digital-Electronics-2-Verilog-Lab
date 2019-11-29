@@ -1,0 +1,18 @@
+module counter_16 (
+	clock,
+	pulse
+);
+
+input clock;
+output pulse;
+
+reg [15:0] count;
+
+always (posedge clock)
+	counter_16 (clock, 1'b1, count, reset);
+	if (count == 50000)
+		pulse <= 1'b1;
+		reset <= 0'b1;
+	else if (pulse == 1'b1)
+		pulse <= 0'b1;
+		reset <= 1'b1;
