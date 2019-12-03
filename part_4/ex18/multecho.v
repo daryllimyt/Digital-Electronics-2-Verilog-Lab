@@ -1,0 +1,32 @@
+module processor(
+	data_in,
+	data_valid,
+	clk,
+	data_out
+);
+	input data_valid, clk;
+	input [9:0] data_in;
+	output [9:0] data_out;
+	
+	wire full;
+	reg echo_control;
+	initial echo_control = 1'b0;
+	
+	wire [9:0] fifo_out;
+	
+	always @ (posedge data_valid)
+		echo_control =  full;
+		
+	assign data_out = data_in - (fifo_out >> 1);
+	
+	FIFO f(
+		.data (data_out),
+		.clock (clk),
+		.wrreq (data_valid),
+		.rdreq (data_valid & echo_control),
+		.full (full),
+		.q (fifo_out)
+	);
+
+
+endmodule
