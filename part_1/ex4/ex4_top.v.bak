@@ -1,0 +1,9 @@
+ex4_top(
+	SW,
+	HEX0,
+	HEX1,
+	HEX2
+);
+
+	input [9:0] SW;
+	output [3:0] HEX0, HEX1, HEX2;

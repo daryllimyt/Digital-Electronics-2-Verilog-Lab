@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex2_top
-Tue Nov 12 11:14:49 2019
+Wed Dec 04 15:30:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -42,14 +42,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 12 11:14:49 2019           ;
+; Analysis & Synthesis Status     ; Successful - Wed Dec 04 15:30:54 2019           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ex2_top                                         ;
 ; Top-level Entity Name           ; ex2_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 0                                               ;
-; Total pins                      ; 11                                              ;
+; Total pins                      ; 17                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -154,8 +154,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -191,14 +191,14 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 11          ;
+; I/O pins                                    ; 17          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[0]~input ;
 ; Maximum fan-out                             ; 7           ;
-; Total fan-out                               ; 46          ;
-; Average fan-out                             ; 1.59        ;
+; Total fan-out                               ; 52          ;
+; Average fan-out                             ; 1.27        ;
 +---------------------------------------------+-------------+
 
 
@@ -207,7 +207,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
-; |ex2_top                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 11   ; 0            ; |ex2_top                  ; ex2_top     ; work         ;
+; |ex2_top                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 17   ; 0            ; |ex2_top                  ; ex2_top     ; work         ;
 ;    |hex_to_7seg:SEG0|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex2_top|hex_to_7seg:SEG0 ; hex_to_7seg ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -237,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     normal            ; 8                           ;
 ;         1 data inputs ; 1                           ;
 ;         4 data inputs ; 7                           ;
-; boundary_port         ; 11                          ;
+; boundary_port         ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
 ; Average LUT depth     ; 1.50                        ;
@@ -259,10 +259,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Nov 12 11:14:38 2019
+    Info: Processing started: Wed Dec 04 15:30:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex2 -c ex2_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.v
     Info (12023): Found entity 1: hex_to_7seg File: H:/VERI/part_1/ex2/hex_to_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ex2_top.v
@@ -272,14 +272,21 @@ Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:SEG0" 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[4]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[5]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[6]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[7]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[8]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[9]" File: H:/VERI/part_1/ex2/ex2_top.v Line: 6
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Tue Nov 12 11:14:49 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Wed Dec 04 15:30:54 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
 
 

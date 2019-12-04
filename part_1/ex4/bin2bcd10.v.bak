@@ -1,0 +1,7 @@
+// implementation based on verilog code in slide 22 of Lecture 10
+module bin2bcd10(
+	B,
+	BCD_0,
+	BCD_1,
+	BCD_2
+);

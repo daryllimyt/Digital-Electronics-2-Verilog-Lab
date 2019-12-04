@@ -1,0 +1,10 @@
+module add3_ge5(
+	in,
+	out
+);
+	input [3:0] in;
+	output [3:0] out;
+	
+	always @ (in)
+		out = (in >= 5) ? (in + 5) : in;
+endmodule
