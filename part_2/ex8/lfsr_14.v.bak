@@ -1,0 +1,13 @@
+module LFSR_14(clk, data_out);
+	output [14:1] data_out;
+	input clk;
+
+	reg [14:1] sreg;
+	initial sreg = 14'd1;
+	always @ (posedge clk)
+		begin
+			sreg <= {sreg[6:1], sreg[7] ^ sreg[1]};
+			end
+		
+	assign data_out = sreg;
+endmodule

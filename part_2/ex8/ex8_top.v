@@ -17,6 +17,7 @@ module ex8_top (
 	output [6:0] HEX2;
 	output [6:0] HEX3;
 	output [6:0] HEX4;
+	output [9:0] LEDR;
 
 	
 	wire [3:0] D0, D1, D2, D3, D4;
@@ -25,7 +26,9 @@ module ex8_top (
 	wire tick_hs;
 	
 	wire lfsr_enable;
-	wire [6:0] random_delay;
+	wire trigger_delay;
+	wire time_out;
+	wire [13:0] random_delay;
 
 	tick_50000 t1(
 		.clock (CLOCK_50),
@@ -39,21 +42,31 @@ module ex8_top (
 
 
 	fsm f(
-		.en_lfsr (lfsr_enable)
+		.clk (tick_ms),
+		.en_lfsr (lfsr_enable),
+		.tick (tick_hs),
+		.trigger (KEY[3]),
+		.time_out (time_out),
+		.start_delay (trigger_delay),
+		.ledr (LEDR)
 	);
 
 
-	LFSR_7 l(
+	LFSR_14 l(
 		.clk (tick_ms & lfsr_enable),
+//		.clk (tick_ms),
 		.data_out (random_delay)
 	);
 
 	delay d(
-		.N (random_delay[5:0]),
+		.N (random_delay),
+		.trigger (time_out),
+		.clk (tick_ms),
+		.time_out (time_out)
 	);
 
 	bin2bcd_16 b(
-		.B ((random_delay[5:0] +1) * 25)
+		.B ({2'b0,random_delay}),
 		.BCD_0 (D0),
 		.BCD_1 (D1),
 		.BCD_2 (D2),
