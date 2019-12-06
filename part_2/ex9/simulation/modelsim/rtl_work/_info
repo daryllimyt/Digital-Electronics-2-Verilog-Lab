@@ -1,0 +1,253 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VERI/part_2/ex9/simulation/modelsim
+vadd3_ge5
+Z1 !s110 1575668878
+!i10b 1
+!s100 bY9<PaFjT``nPMP1I^H[J3
+I[4Nne[TI_5?7>jAfRLgB03
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1474031896
+8H:/VERI/mylib/add3_ge5.v
+FH:/VERI/mylib/add3_ge5.v
+L0 9
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1575668878.000000
+!s107 H:/VERI/mylib/add3_ge5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/mylib|H:/VERI/mylib/add3_ge5.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+H:/VERI/mylib
+Z7 tCvgOpt 0
+vbin2bcd_16
+R1
+!i10b 1
+!s100 k8DUGne5fUX5>kSEdIS@80
+IkADFeTFhU72XgL18^QRAd1
+R2
+R0
+w1480033822
+8H:/VERI/mylib/bin2bcd_16.v
+FH:/VERI/mylib/bin2bcd_16.v
+L0 12
+R3
+r1
+!s85 0
+31
+R4
+!s107 H:/VERI/mylib/bin2bcd_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/mylib|H:/VERI/mylib/bin2bcd_16.v|
+!i113 1
+R5
+R6
+R7
+vdelay
+Z8 !s110 1575668879
+!i10b 1
+!s100 6F?X5oz<d^C2ZSmbb^]YO0
+IdaY6`T?niKd>Ah=fizo^73
+R2
+R0
+w1575556773
+8H:/VERI/part_2/ex9/delay.v
+FH:/VERI/part_2/ex9/delay.v
+L0 31
+R3
+r1
+!s85 0
+31
+Z9 !s108 1575668879.000000
+!s107 H:/VERI/part_2/ex9/delay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex9|H:/VERI/part_2/ex9/delay.v|
+!i113 1
+R5
+Z10 !s92 -vlog01compat -work work +incdir+H:/VERI/part_2/ex9
+R7
+vex9_top
+R8
+!i10b 1
+!s100 XK3=2zldI[`2mJh4m3]Jn3
+IZ[b^nGT0PRL8Wo?k7VV0T1
+R2
+R0
+w1575662544
+8H:/VERI/part_2/ex9/ex9_top.v
+FH:/VERI/part_2/ex9/ex9_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 H:/VERI/part_2/ex9/ex9_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex9|H:/VERI/part_2/ex9/ex9_top.v|
+!i113 1
+R5
+R10
+R7
+vfsm
+R8
+!i10b 1
+!s100 >K;c5W^SVa@CBT>FGQXQS1
+IQT5`Lj>QEn6FSG@6;A38N1
+R2
+R0
+w1575661625
+8H:/VERI/part_2/ex9/fsm.v
+FH:/VERI/part_2/ex9/fsm.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 H:/VERI/part_2/ex9/fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex9|H:/VERI/part_2/ex9/fsm.v|
+!i113 1
+R5
+R10
+R7
+vhex_to_7seg
+R1
+!i10b 1
+!s100 PbkV<lL2cgm`C3Fjf[cYJ1
+IW<7CzJRD]_o79:LTGe9SA3
+R2
+R0
+w1573556787
+8H:/VERI/mylib/hex_to_7seg.v
+FH:/VERI/mylib/hex_to_7seg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 H:/VERI/mylib/hex_to_7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/mylib|H:/VERI/mylib/hex_to_7seg.v|
+!i113 1
+R5
+R6
+R7
+vLFSR_14
+R8
+!i10b 1
+!s100 aih>FKMAh8TGDSR1@`a4F3
+I[dM^ha3HWJ@he5[9X6mRG3
+R2
+R0
+w1575651097
+8H:/VERI/part_2/ex9/lfsr_14.v
+FH:/VERI/part_2/ex9/lfsr_14.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 H:/VERI/part_2/ex9/lfsr_14.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex9|H:/VERI/part_2/ex9/lfsr_14.v|
+!i113 1
+R5
+R10
+R7
+n@l@f@s@r_14
+vreaction_counter
+R8
+!i10b 1
+!s100 mnjbS>3l??mlo5KFXzhLV2
+IFDTnOgN_L4?gV1I6FSOU33
+R2
+R0
+w1575663063
+8H:/VERI/part_2/ex9/reaction_counter.v
+FH:/VERI/part_2/ex9/reaction_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 H:/VERI/part_2/ex9/reaction_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex9|H:/VERI/part_2/ex9/reaction_counter.v|
+!i113 1
+R5
+R10
+R7
+vtick_500
+R1
+!i10b 1
+!s100 eUPJk8Rd2Z=i9C7jiZeDh3
+IiX<l8hQ1Ref9H;D@]>k;Z2
+R2
+R0
+Z11 w1575654804
+Z12 8H:/VERI/mylib/tick_5000.v
+Z13 FH:/VERI/mylib/tick_5000.v
+L0 48
+R3
+r1
+!s85 0
+31
+R4
+Z14 !s107 H:/VERI/mylib/tick_5000.v|
+Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/mylib|H:/VERI/mylib/tick_5000.v|
+!i113 1
+R5
+R6
+R7
+vtick_5000
+R1
+!i10b 1
+!s100 SORRaffP;=3I`?lcLnO=b3
+I5c7RU`R<N^RD_Z^Q`JlHi1
+R2
+R0
+R11
+R12
+R13
+L0 25
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vtick_50000
+R1
+!i10b 1
+!s100 lgZXLj@4@j=D:zMPMGNje2
+IRVEz;:zGGPFbFXIWk]^m13
+R2
+R0
+R11
+R12
+R13
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7

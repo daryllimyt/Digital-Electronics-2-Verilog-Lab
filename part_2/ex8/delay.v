@@ -57,7 +57,7 @@ module delay(
 			COUNTING: if (count==0) begin
 							count <= N - 1'b1;
 							state <= TIME_OUT;
-						 end
+							end
 						 else count <= count - 1'b1;
 			TIME_OUT: if (trigger == 1'b0) state <= IDLE;
 						 else state <= WAIT_LOW;

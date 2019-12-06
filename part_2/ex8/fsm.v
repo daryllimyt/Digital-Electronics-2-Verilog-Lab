@@ -21,7 +21,7 @@ module fsm(
 
 	reg en_lfsr;
 	reg start_delay;
-	reg ledr;
+	reg [9:0] ledr;
 
 	reg running;
 	
@@ -47,6 +47,7 @@ module fsm(
 		end
 		else begin	
 			ledr <= 10'b0;
+			counter <= 10'b1;
 			start_delay <= 1'b0;
 		end
 		

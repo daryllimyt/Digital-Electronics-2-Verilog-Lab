@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex8_top
-Thu Dec 05 15:48:43 2019
+Fri Dec 06 22:37:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -15,22 +15,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |ex8_top|delay:d|state
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: delay:d
- 15. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A31"
- 16. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A19"
- 17. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A10"
- 18. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A4"
- 19. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A1"
- 20. Port Connectivity Checks: "bin2bcd_16:b"
- 21. Port Connectivity Checks: "fsm:f"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: delay:d
+ 14. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A31"
+ 15. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A19"
+ 16. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A10"
+ 17. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A4"
+ 18. Port Connectivity Checks: "bin2bcd_16:b|add3_ge5:A1"
+ 19. Port Connectivity Checks: "bin2bcd_16:b"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,13 +54,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 05 15:48:43 2019           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 06 22:37:11 2019           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ex8_top                                         ;
 ; Top-level Entity Name           ; ex8_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 39                                              ;
+; Total registers                 ; 89                                              ;
 ; Total pins                      ; 50                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -196,44 +194,77 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 23             ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 44             ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 0              ;
-;     -- 5 input functions                    ; 6              ;
-;     -- 4 input functions                    ; 2              ;
-;     -- <=3 input functions                  ; 36             ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 39             ;
-;                                             ;                ;
-; I/O pins                                    ; 50             ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 18             ;
-; Total fan-out                               ; 268            ;
-; Average fan-out                             ; 1.46           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 136                ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 242                ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 29                 ;
+;     -- 5 input functions                    ; 16                 ;
+;     -- 4 input functions                    ; 115                ;
+;     -- <=3 input functions                  ; 82                 ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 89                 ;
+;                                             ;                    ;
+; I/O pins                                    ; 50                 ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; LFSR_14:l|sreg[13] ;
+; Maximum fan-out                             ; 25                 ;
+; Total fan-out                               ; 1262               ;
+; Average fan-out                             ; 2.93               ;
++---------------------------------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; |ex8_top                   ; 44 (2)              ; 39 (0)                    ; 0                 ; 0          ; 50   ; 0            ; |ex8_top               ; ex8_top     ; work         ;
-;    |LFSR_14:l|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|LFSR_14:l     ; LFSR_14     ; work         ;
-;    |fsm:f|                 ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|fsm:f         ; fsm         ; work         ;
-;    |tick_50000:t1|         ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|tick_50000:t1 ; tick_50000  ; work         ;
-;    |tick_5000:t2|          ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|tick_5000:t2  ; tick_5000   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; |ex8_top                   ; 242 (3)             ; 89 (0)                    ; 0                 ; 0          ; 50   ; 0            ; |ex8_top                           ; ex8_top     ; work         ;
+;    |LFSR_14:l|             ; 19 (19)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|LFSR_14:l                 ; LFSR_14     ; work         ;
+;    |bin2bcd_16:b|          ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b              ; bin2bcd_16  ; work         ;
+;       |add3_ge5:A11|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A11 ; add3_ge5    ; work         ;
+;       |add3_ge5:A12|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A12 ; add3_ge5    ; work         ;
+;       |add3_ge5:A14|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A14 ; add3_ge5    ; work         ;
+;       |add3_ge5:A15|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A15 ; add3_ge5    ; work         ;
+;       |add3_ge5:A16|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A16 ; add3_ge5    ; work         ;
+;       |add3_ge5:A17|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A17 ; add3_ge5    ; work         ;
+;       |add3_ge5:A18|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A18 ; add3_ge5    ; work         ;
+;       |add3_ge5:A20|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A20 ; add3_ge5    ; work         ;
+;       |add3_ge5:A21|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A21 ; add3_ge5    ; work         ;
+;       |add3_ge5:A22|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A22 ; add3_ge5    ; work         ;
+;       |add3_ge5:A24|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A24 ; add3_ge5    ; work         ;
+;       |add3_ge5:A25|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A25 ; add3_ge5    ; work         ;
+;       |add3_ge5:A26|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A26 ; add3_ge5    ; work         ;
+;       |add3_ge5:A27|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A27 ; add3_ge5    ; work         ;
+;       |add3_ge5:A28|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A28 ; add3_ge5    ; work         ;
+;       |add3_ge5:A29|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A29 ; add3_ge5    ; work         ;
+;       |add3_ge5:A30|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A30 ; add3_ge5    ; work         ;
+;       |add3_ge5:A32|       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A32 ; add3_ge5    ; work         ;
+;       |add3_ge5:A33|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A33 ; add3_ge5    ; work         ;
+;       |add3_ge5:A34|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A34 ; add3_ge5    ; work         ;
+;       |add3_ge5:A35|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A35 ; add3_ge5    ; work         ;
+;       |add3_ge5:A3|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A3  ; add3_ge5    ; work         ;
+;       |add3_ge5:A5|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A5  ; add3_ge5    ; work         ;
+;       |add3_ge5:A7|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A7  ; add3_ge5    ; work         ;
+;       |add3_ge5:A8|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A8  ; add3_ge5    ; work         ;
+;       |add3_ge5:A9|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|bin2bcd_16:b|add3_ge5:A9  ; add3_ge5    ; work         ;
+;    |delay:d|               ; 34 (34)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|delay:d                   ; delay       ; work         ;
+;    |fsm:f|                 ; 18 (18)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|fsm:f                     ; fsm         ; work         ;
+;    |hex_to_7seg:SEG0|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|hex_to_7seg:SEG0          ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:SEG1|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|hex_to_7seg:SEG1          ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:SEG2|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|hex_to_7seg:SEG2          ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:SEG3|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|hex_to_7seg:SEG3          ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:SEG4|      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|hex_to_7seg:SEG4          ; hex_to_7seg ; work         ;
+;    |tick_50000:t1|         ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|tick_50000:t1             ; tick_50000  ; work         ;
+;    |tick_500:t2|           ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex8_top|tick_500:t2               ; tick_500    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -250,42 +281,15 @@ Encoding Type:  One-Hot
 +----------------+----------------+----------------+----------------+------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; LFSR_14:l|sreg[3,9..14]                ; Stuck at GND due to stuck port data_in      ;
-; fsm:f|counter[1..9]                    ; Lost fanout                                 ;
-; LFSR_14:l|sreg[2]                      ; Merged with LFSR_14:l|sreg[4]               ;
-; LFSR_14:l|sreg[4]                      ; Merged with LFSR_14:l|sreg[5]               ;
-; LFSR_14:l|sreg[5]                      ; Merged with LFSR_14:l|sreg[6]               ;
-; LFSR_14:l|sreg[6]                      ; Merged with LFSR_14:l|sreg[7]               ;
-; LFSR_14:l|sreg[1,7]                    ; Merged with LFSR_14:l|sreg[8]               ;
-; delay:d|state~5                        ; Lost fanout                                 ;
-; delay:d|state~6                        ; Lost fanout                                 ;
-; delay:d|state.IDLE                     ; Lost fanout                                 ;
-; delay:d|state.WAIT_LOW                 ; Lost fanout                                 ;
-; delay:d|state.COUNTING                 ; Stuck at GND due to stuck port data_in      ;
-; delay:d|state.TIME_OUT                 ; Stuck at GND due to stuck port data_in      ;
-; delay:d|count[0,3..7]                  ; Stuck at GND due to stuck port clock_enable ;
-; delay:d|count[1,2,8..13]               ; Stuck at GND due to stuck port clock        ;
-; Total Number of Removed Registers = 42 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+------------------------+---------------------------+-------------------------------------------------------------------------------------------+
-; Register name          ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
-+------------------------+---------------------------+-------------------------------------------------------------------------------------------+
-; LFSR_14:l|sreg[14]     ; Stuck at GND              ; delay:d|count[6], delay:d|count[7], delay:d|count[12], delay:d|count[13],                 ;
-;                        ; due to stuck port data_in ; delay:d|count[8], delay:d|count[9], delay:d|count[10], delay:d|count[11]                  ;
-; fsm:f|counter[9]       ; Lost Fanouts              ; fsm:f|counter[8], fsm:f|counter[7], fsm:f|counter[6], fsm:f|counter[5], fsm:f|counter[4], ;
-;                        ;                           ; fsm:f|counter[3], fsm:f|counter[2], fsm:f|counter[1]                                      ;
-; delay:d|state.COUNTING ; Stuck at GND              ; delay:d|state.TIME_OUT, delay:d|count[2], delay:d|count[1]                                ;
-;                        ; due to stuck port data_in ;                                                                                           ;
-+------------------------+---------------------------+-------------------------------------------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; delay:d|state~5                       ; Lost fanout        ;
+; delay:d|state~6                       ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -293,12 +297,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
-; Number of registers using Synchronous Clear  ; 21    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 40    ;
+; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Clock Enable       ; 33    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -308,9 +312,10 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; fsm:f|counter[0]                       ; 2       ;
-; fsm:f|en_lfsr                          ; 1       ;
-; Total number of inverted registers = 2 ;         ;
+; LFSR_14:l|sreg[1]                      ; 11      ;
+; fsm:f|counter[0]                       ; 3       ;
+; fsm:f|en_lfsr                          ; 2       ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
@@ -319,6 +324,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |ex8_top|fsm:f|counter[8]  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |ex8_top|delay:d|Selector1 ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |ex8_top|delay:d|Selector0 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -392,39 +399,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fsm:f"                                                                                                                                                                        ;
-+-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                                                ;
-+-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; start_delay ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                    ;
-; ledr        ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (10 bits) it drives.  The 9 most-significant bit(s) in the port expression will be connected to GND. ;
-+-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 39                          ;
-;     ENA               ; 2                           ;
+; arriav_ff             ; 89                          ;
+;     ENA SCLR          ; 19                          ;
+;     ENA SLD           ; 14                          ;
 ;     SCLR              ; 21                          ;
-;     plain             ; 16                          ;
-; arriav_lcell_comb     ; 47                          ;
-;     arith             ; 32                          ;
-;         1 data inputs ; 32                          ;
-;     normal            ; 15                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
+;     SLD               ; 1                           ;
+;     plain             ; 34                          ;
+; arriav_lcell_comb     ; 260                         ;
+;     arith             ; 70                          ;
+;         1 data inputs ; 60                          ;
+;         2 data inputs ; 10                          ;
+;     normal            ; 190                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 19                          ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 115                         ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 29                          ;
 ; boundary_port         ; 50                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 1.91                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 5.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -433,7 +434,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -443,7 +444,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Dec 05 15:48:30 2019
+    Info: Processing started: Fri Dec 06 22:36:58 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex8 -c ex8_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -461,69 +462,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file /veri/m
     Info (12023): Found entity 1: bin2bcd_16 File: H:/VERI/mylib/bin2bcd_16.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file /veri/mylib/bin2bcd_8.v
     Info (12023): Found entity 1: bin2bcd8 File: H:/VERI/mylib/bin2bcd_8.v Line: 12
-Info (12021): Found 2 design units, including 2 entities, in source file /veri/mylib/tick_5000.v
+Info (12021): Found 3 design units, including 3 entities, in source file /veri/mylib/tick_5000.v
     Info (12023): Found entity 1: tick_50000 File: H:/VERI/mylib/tick_5000.v Line: 1
     Info (12023): Found entity 2: tick_5000 File: H:/VERI/mylib/tick_5000.v Line: 25
+    Info (12023): Found entity 3: tick_500 File: H:/VERI/mylib/tick_5000.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file delay.v
     Info (12023): Found entity 1: delay File: H:/VERI/part_2/ex8/delay.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr_14.v
     Info (12023): Found entity 1: LFSR_14 File: H:/VERI/part_2/ex8/lfsr_14.v Line: 1
-Critical Warning (10226): Verilog HDL Port Declaration warning at fsm.v(24): port declaration for "ledr" declares packed dimensions but the data type declaration does not File: H:/VERI/part_2/ex8/fsm.v Line: 24
-Info (10499): HDL info at fsm.v(18): see declaration for object "ledr" File: H:/VERI/part_2/ex8/fsm.v Line: 18
 Info (12127): Elaborating entity "ex8_top" for the top level hierarchy
 Info (12128): Elaborating entity "tick_50000" for hierarchy "tick_50000:t1" File: H:/VERI/part_2/ex8/ex8_top.v Line: 36
 Warning (10230): Verilog HDL assignment warning at tick_5000.v(20): truncated value with size 32 to match size of target (16) File: H:/VERI/mylib/tick_5000.v Line: 20
-Info (12128): Elaborating entity "tick_5000" for hierarchy "tick_5000:t2" File: H:/VERI/part_2/ex8/ex8_top.v Line: 41
-Warning (10230): Verilog HDL assignment warning at tick_5000.v(44): truncated value with size 32 to match size of target (16) File: H:/VERI/mylib/tick_5000.v Line: 44
+Info (12128): Elaborating entity "tick_500" for hierarchy "tick_500:t2" File: H:/VERI/part_2/ex8/ex8_top.v Line: 41
+Warning (10230): Verilog HDL assignment warning at tick_5000.v(67): truncated value with size 32 to match size of target (16) File: H:/VERI/mylib/tick_5000.v Line: 67
 Info (12128): Elaborating entity "fsm" for hierarchy "fsm:f" File: H:/VERI/part_2/ex8/ex8_top.v Line: 52
-Warning (10230): Verilog HDL assignment warning at fsm.v(31): truncated value with size 10 to match size of target (1) File: H:/VERI/part_2/ex8/fsm.v Line: 31
-Warning (10230): Verilog HDL assignment warning at fsm.v(41): truncated value with size 10 to match size of target (1) File: H:/VERI/part_2/ex8/fsm.v Line: 41
-Warning (10230): Verilog HDL assignment warning at fsm.v(49): truncated value with size 10 to match size of target (1) File: H:/VERI/part_2/ex8/fsm.v Line: 49
 Info (12128): Elaborating entity "LFSR_14" for hierarchy "LFSR_14:l" File: H:/VERI/part_2/ex8/ex8_top.v Line: 59
-Warning (10230): Verilog HDL assignment warning at lfsr_14.v(11): truncated value with size 32 to match size of target (14) File: H:/VERI/part_2/ex8/lfsr_14.v Line: 11
+Warning (10230): Verilog HDL assignment warning at lfsr_14.v(13): truncated value with size 32 to match size of target (14) File: H:/VERI/part_2/ex8/lfsr_14.v Line: 13
 Info (12128): Elaborating entity "delay" for hierarchy "delay:d" File: H:/VERI/part_2/ex8/ex8_top.v Line: 66
 Warning (10855): Verilog HDL warning at delay.v(52): initial value for variable count should be constant File: H:/VERI/part_2/ex8/delay.v Line: 52
 Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:b" File: H:/VERI/part_2/ex8/ex8_top.v Line: 75
 Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:b|add3_ge5:A1" File: H:/VERI/mylib/bin2bcd_16.v Line: 26
 Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:SEG0" File: H:/VERI/part_2/ex8/ex8_top.v Line: 77
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 20
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 15
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 15
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: H:/VERI/part_2/ex8/ex8_top.v Line: 15
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 16
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 16
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 16
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 16
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 17
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 17
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 17
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 17
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: H:/VERI/part_2/ex8/ex8_top.v Line: 18
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
     Warning (13410): Pin "HEX4[1]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: H:/VERI/part_2/ex8/ex8_top.v Line: 19
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file H:/VERI/part_2/ex8/output_files/ex8_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -531,15 +494,15 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: H:/VERI/part_2/ex8/ex8_top.v Line: 13
     Warning (15610): No output dependent on input pin "KEY[1]" File: H:/VERI/part_2/ex8/ex8_top.v Line: 13
     Warning (15610): No output dependent on input pin "KEY[2]" File: H:/VERI/part_2/ex8/ex8_top.v Line: 13
-Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 49 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Thu Dec 05 15:48:43 2019
+    Info (21061): Implemented 252 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Fri Dec 06 22:37:11 2019
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+

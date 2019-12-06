@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Dec 05 15:48:43 2019
+Analysis & Synthesis Status : Successful - Fri Dec 06 22:37:11 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : ex8_top
 Top-level Entity Name : ex8_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 39
+Total registers : 89
 Total pins : 50
 Total virtual pins : 0
 Total block memory bits : 0

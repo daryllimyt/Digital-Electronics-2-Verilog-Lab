@@ -35,7 +35,7 @@ module ex8_top (
 		.pulse (tick_ms)
 	);
 
-	tick_5000 t2(
+	tick_500 t2(
 		.clock (CLOCK_50 & tick_ms),
 		.pulse (tick_hs)
 	);
@@ -60,7 +60,7 @@ module ex8_top (
 
 	delay d(
 		.N (random_delay),
-		.trigger (time_out),
+		.trigger (trigger_delay),
 		.clk (tick_ms),
 		.time_out (time_out)
 	);
