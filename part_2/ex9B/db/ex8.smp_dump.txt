@@ -1,0 +1,7 @@
+
+State Machine - |ex8_top|delay:d|state
+Name state.WAIT_LOW state.TIME_OUT state.COUNTING state.IDLE 
+state.IDLE 0 0 0 0 
+state.COUNTING 0 0 1 1 
+state.TIME_OUT 0 1 0 1 
+state.WAIT_LOW 1 0 0 1 
