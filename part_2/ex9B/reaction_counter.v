@@ -14,7 +14,26 @@ module reaction_counter(
 	initial state = not_counting;
 	initial count = 16'd0;
 	
-	always @ (posedge clk, posedge start_counting, posedge end_counting)
+//	always @ (posedge start_counting, posedge end_counting)
+//		case(state)
+//			counting:
+//				if (end_counting) state <= not_counting;
+//			not_counting: 
+//				if (start_counting) state <= counting;
+////					count <= 16'b0;
+//			default: ;
+//		endcase
+//		
+//	always @ (posedge clk)
+//		case(state)
+//			counting: count <= count + 1;
+//			default: ;
+//		endcase
+//		
+//		
+//		
+		
+	always @ (posedge clk)
 		case(state)
 			counting:
 				if (end_counting) state <= not_counting;
@@ -23,7 +42,7 @@ module reaction_counter(
 				if (start_counting) begin
 					state <= counting;
 					count <= 16'b0;
-				end
+			end
 			default: ;
 		endcase
 endmodule

@@ -69,7 +69,7 @@ module ex8_top (
 	wire [15:0] display;
 	
 	reaction_counter r(
-		.clk (tick_hs),
+		.clk (tick_ms),
 		.start_counting (time_out),
 		.end_counting (~KEY[0]),
 		.count (display)
