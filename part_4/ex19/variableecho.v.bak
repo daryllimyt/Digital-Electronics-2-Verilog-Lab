@@ -1,0 +1,11 @@
+module processor(
+	y,
+	x,
+	SW,
+	bcd
+);
+
+	input [9:0] x;
+	output [9:0] y;
+
+	

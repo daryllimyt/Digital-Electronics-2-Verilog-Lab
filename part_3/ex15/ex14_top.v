@@ -11,13 +11,15 @@ module ex14_top(
 	DAC_LD,
 	PWM_OUT,
 	ADC_SCK,
-	ADC_CS
+	ADC_CS,
+	ADC_SDI,
+	ADC_SDO
 );
 
-	input [9:0] SW;
 	input CLOCK_50;
 
-	output DAC_SDI, DAC_CS, DAC_SCK, DAC_LD, PWM_OUT;
+	output DAC_SDI, DAC_CS, DAC_SCK, DAC_LD, PWM_OUT, 	ADC_SCK, ADC_CS, ADC_SDI;
+	input ADC_SDO;
 	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4;
 
 	reg [9:0] Addr;
@@ -42,7 +44,7 @@ module ex14_top(
 	);
 
 	always @ (posedge tick)
-		Addr = Addr + SW;
+		Addr = Addr + potentiometer_value;
 
 	ROM r(
 		.address (Addr),
@@ -61,16 +63,18 @@ module ex14_top(
 		.result (product)
 	);
 	
+	wire data_valid;
+	
 	spi2adc a2s (
 		.sysclk (CLOCK_50), 
-		.start (, 
-		channel, 
+		.start (tick), 
+		.channel (1'b0), 
 		.data_from_adc (potentiometer_value), 
-		data_valid, 
-		.sdata_to_adc (ADC_DO), 
+		.data_valid (data_valid), 
+		.sdata_to_adc (ADC_SDI), 
 		.adc_cs (ADC_CS), 
 		.adc_sck (ADC_SCK), 
-		.sdata_from_adc (ADC_DO)
+		.sdata_from_adc (ADC_SDO)
 	);
 	
 	

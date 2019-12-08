@@ -160,35 +160,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[2]",
+					"name" : "ADC_SCK",
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "ADC_CS",
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[8]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[9]",
+					"name" : "ADC_SDI",
 					"strict" : false
 				},
 				{
@@ -196,11 +176,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[4]",
+					"name" : "ADC_SDO",
 					"strict" : false
 				}
 			]

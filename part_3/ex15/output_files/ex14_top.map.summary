@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Dec 08 02:26:28 2019
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sun Dec 08 15:57:48 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : ex14_top
 Top-level Entity Name : ex14_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 77
-Total pins : 51
+Total registers : 110
+Total pins : 45
 Total virtual pins : 0
 Total block memory bits : 10,240
 Total DSP Blocks : 0
