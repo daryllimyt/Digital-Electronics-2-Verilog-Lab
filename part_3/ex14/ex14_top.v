@@ -1,15 +1,23 @@
 module ex14_top(
 	SW,
 	CLOCK_50,
-	HEX...,
-	DAC...,
-	LP...
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	DAC_SDI,
+	DAC_CS,
+	DAC_SCK,
+	DAC_LD,
+	PWM_OUT
 );
 
 	input [9:0] SW;
 	input CLOCK_50;
 
-	output ...;
+	output DAC_SDI, DAC_CS, DAC_SCK, DAC_LD, PWM_OUT;
+	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4;
 
 	reg [9:0] Addr;
 	
@@ -32,7 +40,7 @@ module ex14_top(
 		.pulse (tick)
 	);
 
-	always (posedge tick)
+	always @ (posedge tick)
 		Addr = Addr + SW;
 
 	ROM r(
@@ -46,10 +54,13 @@ module ex14_top(
 	
 	
 	// display path
-
+	const_mult2(
+		.dataa (SW),
+		.result (product)
+	);
 	
 	
-	bin2bcd_16([23, 10]product, BCD0, BCD1, BCD2, BCD3, BCD4);
+	bin2bcd_16({2'b0,product[23:10]}, BCD0, BCD1, BCD2, BCD3, BCD4);
 	hex_to_7seg SE0(HEX0, BCD0);
 	hex_to_7seg SE1(HEX1, BCD1);
 	hex_to_7seg SE2(HEX2, BCD2);

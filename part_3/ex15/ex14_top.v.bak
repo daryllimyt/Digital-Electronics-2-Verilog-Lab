@@ -1,0 +1,35 @@
+module ex14_top(
+	SW,
+	CLOCK_50,
+	HEX...,
+	DAC...,
+	LP...
+);
+
+	input [9:0] SW;
+	input CLOCK_50;
+
+	output ...;
+
+	reg [9:0] Addr;
+	
+	wire tick;
+
+	tick_5000 t(
+		.clock (CLOCK_50),
+		.pulse (tick)
+	);
+
+	always (posedge tick)
+		Addr = Addr + SW;
+
+	ROM r(
+	
+	);
+
+	spi2dac s();
+	pwm p();
+
+	
+
+endmodule
