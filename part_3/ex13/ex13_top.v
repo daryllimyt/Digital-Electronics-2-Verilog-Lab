@@ -8,7 +8,7 @@ module ex13_top(SW, CLOCK_50, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, PWM_OUT);
 	output PWM_OUT;
 	
 	wire tick;
-	tick_50000 t(CLOCK_50, tick);
+	tick_5000 t(CLOCK_50, tick);
 
 	wire [9:0] count;
 	counter_10 c (CLOCK_50, tick, count,1'b1);

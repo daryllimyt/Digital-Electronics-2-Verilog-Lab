@@ -1,5 +1,5 @@
 Fitter report for ex13_top
-Fri Nov 29 15:19:34 2019
+Mon Dec 09 15:52:22 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 29 15:19:34 2019           ;
+; Fitter Status                   ; Successful - Mon Dec 09 15:52:22 2019           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ex13_top                                        ;
 ; Top-level Entity Name           ; ex13_top                                        ;
@@ -167,22 +167,22 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                          ;
-+---------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------+------------------+-----------------------+
-; Node                      ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                    ; Destination Port ; Destination Port Name ;
-+---------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------+------------------+-----------------------+
-; CLOCK_50~inputCLKENA0     ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                     ;                  ;                       ;
-; spi2dac:s2d|clk_1MHz      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|clk_1MHz~DUPLICATE      ;                  ;                       ;
-; spi2dac:s2d|ctr[0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|ctr[0]~DUPLICATE        ;                  ;                       ;
-; spi2dac:s2d|ctr[1]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|ctr[1]~DUPLICATE        ;                  ;                       ;
-; spi2dac:s2d|ctr[2]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|ctr[2]~DUPLICATE        ;                  ;                       ;
-; spi2dac:s2d|sr_state.IDLE ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|sr_state.IDLE~DUPLICATE ;                  ;                       ;
-; spi2dac:s2d|state[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[1]~DUPLICATE      ;                  ;                       ;
-; spi2dac:s2d|state[2]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[2]~DUPLICATE      ;                  ;                       ;
-; spi2dac:s2d|state[4]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[4]~DUPLICATE      ;                  ;                       ;
-; tick_50000:t|count[4]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_50000:t|count[4]~DUPLICATE     ;                  ;                       ;
-+---------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------+------------------+-----------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                 ;
++-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------+------------------+-----------------------+
+; Node                  ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node               ; Destination Port ; Destination Port Name ;
++-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------+------------------+-----------------------+
+; CLOCK_50~inputCLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                ;                  ;                       ;
+; pwm:p|count[0]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; pwm:p|count[0]~DUPLICATE       ;                  ;                       ;
+; spi2dac:s2d|clk_1MHz  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|clk_1MHz~DUPLICATE ;                  ;                       ;
+; spi2dac:s2d|ctr[1]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|ctr[1]~DUPLICATE   ;                  ;                       ;
+; spi2dac:s2d|ctr[3]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|ctr[3]~DUPLICATE   ;                  ;                       ;
+; spi2dac:s2d|state[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[0]~DUPLICATE ;                  ;                       ;
+; spi2dac:s2d|state[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[1]~DUPLICATE ;                  ;                       ;
+; spi2dac:s2d|state[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[3]~DUPLICATE ;                  ;                       ;
+; spi2dac:s2d|state[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:s2d|state[4]~DUPLICATE ;                  ;                       ;
+; tick_5000:t|count[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_5000:t|count[4]~DUPLICATE ;                  ;                       ;
++-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -371,12 +371,12 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 46 / 32,070        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 46                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 49 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 33                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 10                 ;       ;
-;         [c] ALMs used for registers                         ; 6                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 53 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 32                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 14                 ;       ;
+;         [c] ALMs used for registers                         ; 7                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -385,8 +385,8 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 9 / 3,207          ; < 1 % ;
-;     -- Logic LABs                                           ; 9                  ;       ;
+; Total LABs:  partially or completely used                   ; 8 / 3,207          ; < 1 % ;
+;     -- Logic LABs                                           ; 8                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 75                 ;       ;
@@ -459,11 +459,11 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.7% / 0.8% / 0.4% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.4% / 0.4% / 0.1% ;       ;
 ; Maximum fan-out                                             ; 85                 ;       ;
-; Highest non-global fan-out                                  ; 28                 ;       ;
-; Total fan-out                                               ; 529                ;       ;
-; Average fan-out                                             ; 2.59               ;       ;
+; Highest non-global fan-out                                  ; 29                 ;       ;
+; Total fan-out                                               ; 532                ;       ;
+; Average fan-out                                             ; 2.61               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -474,12 +474,12 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 46 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 46                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 49 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 33                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 10                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 53 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 32                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 14                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 7                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -488,8 +488,8 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 9 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 9                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 8 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 8                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 75                   ; 0                              ;
@@ -527,8 +527,8 @@ The pin-out file can be found in H:/VERI/part_3/ex13/output_files/ex13_top.pin.
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 529                  ; 0                              ;
-;     -- Registered Connections                               ; 276                  ; 0                              ;
+;     -- Total Connections                                    ; 532                  ; 0                              ;
+;     -- Registered Connections                               ; 277                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -1532,14 +1532,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name     ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
-; |ex13_top                                 ; 45.5 (0.5)           ; 48.0 (0.5)                       ; 2.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 75 (1)              ; 86 (0)                    ; 0 (0)         ; 10240             ; 1     ; 0          ; 16   ; 0            ; |ex13_top                                                                      ; ex13_top        ; work         ;
+; |ex13_top                                 ; 46.0 (0.5)           ; 52.5 (0.5)                       ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 75 (1)              ; 86 (0)                    ; 0 (0)         ; 10240             ; 1     ; 0          ; 16   ; 0            ; |ex13_top                                                                      ; ex13_top        ; work         ;
 ;    |ROM:r|                                ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex13_top|ROM:r                                                                ; ROM             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex13_top|ROM:r|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_usf1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex13_top|ROM:r|altsyncram:altsyncram_component|altsyncram_usf1:auto_generated ; altsyncram_usf1 ; work         ;
 ;    |counter_10:c|                         ; 5.0 (5.0)            ; 5.0 (5.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|counter_10:c                                                         ; counter_10      ; work         ;
-;    |pwm:p|                                ; 10.5 (10.5)          ; 11.5 (11.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 19 (19)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|pwm:p                                                                ; pwm             ; work         ;
-;    |spi2dac:s2d|                          ; 18.5 (18.5)          ; 19.5 (19.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 25 (25)             ; 37 (37)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|spi2dac:s2d                                                          ; spi2dac         ; work         ;
-;    |tick_50000:t|                         ; 11.0 (11.0)          ; 11.5 (11.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|tick_50000:t                                                         ; tick_50000      ; work         ;
+;    |pwm:p|                                ; 10.7 (10.7)          ; 11.7 (11.7)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 19 (19)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|pwm:p                                                                ; pwm             ; work         ;
+;    |spi2dac:s2d|                          ; 18.8 (18.8)          ; 23.8 (23.8)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 25 (25)             ; 36 (36)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|spi2dac:s2d                                                          ; spi2dac         ; work         ;
+;    |tick_5000:t|                          ; 11.0 (11.0)          ; 11.5 (11.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex13_top|tick_5000:t                                                          ; tick_5000       ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1568,38 +1568,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+---------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                          ;
-+---------------------------+-------------------+---------+
-; Source Pin / Fanout       ; Pad To Core Index ; Setting ;
-+---------------------------+-------------------+---------+
-; SW[0]                     ;                   ;         ;
-; SW[1]                     ;                   ;         ;
-; SW[2]                     ;                   ;         ;
-; SW[3]                     ;                   ;         ;
-; SW[4]                     ;                   ;         ;
-; SW[5]                     ;                   ;         ;
-; SW[6]                     ;                   ;         ;
-; SW[7]                     ;                   ;         ;
-; SW[8]                     ;                   ;         ;
-; SW[9]                     ;                   ;         ;
-; CLOCK_50                  ;                   ;         ;
-;      - tick_50000:t|pulse ; 0                 ; 0       ;
-+---------------------------+-------------------+---------+
++--------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                         ;
++--------------------------+-------------------+---------+
+; Source Pin / Fanout      ; Pad To Core Index ; Setting ;
++--------------------------+-------------------+---------+
+; SW[0]                    ;                   ;         ;
+; SW[1]                    ;                   ;         ;
+; SW[2]                    ;                   ;         ;
+; SW[3]                    ;                   ;         ;
+; SW[4]                    ;                   ;         ;
+; SW[5]                    ;                   ;         ;
+; SW[6]                    ;                   ;         ;
+; SW[7]                    ;                   ;         ;
+; SW[8]                    ;                   ;         ;
+; SW[9]                    ;                   ;         ;
+; CLOCK_50                 ;                   ;         ;
+;      - tick_5000:t|pulse ; 0                 ; 0       ;
++--------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                           ;
-+-----------------------+--------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
-; Name                  ; Location           ; Fan-Out ; Usage               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------+--------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50              ; PIN_AF14           ; 2       ; Clock               ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50              ; PIN_AF14           ; 85      ; Clock               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; spi2dac:s2d|always5~0 ; LABCELL_X37_Y2_N15 ; 9       ; Sync. load          ; no     ; --                   ; --               ; --                        ;
-; spi2dac:s2d|tick      ; FF_X37_Y4_N11      ; 28      ; Clock enable        ; no     ; --                   ; --               ; --                        ;
-; tick_50000:t|Equal0~3 ; LABCELL_X36_Y3_N36 ; 11      ; Sync. clear         ; no     ; --                   ; --               ; --                        ;
-; tick_50000:t|pulse    ; FF_X37_Y3_N53      ; 23      ; Clock, Clock enable ; no     ; --                   ; --               ; --                        ;
-+-----------------------+--------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                            ;
++-----------------------+---------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
+; Name                  ; Location            ; Fan-Out ; Usage               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------+---------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50              ; PIN_AF14            ; 2       ; Clock               ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50              ; PIN_AF14            ; 85      ; Clock               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; spi2dac:s2d|always5~0 ; MLABCELL_X28_Y3_N27 ; 9       ; Sync. load          ; no     ; --                   ; --               ; --                        ;
+; spi2dac:s2d|tick      ; FF_X29_Y3_N38       ; 29      ; Clock enable        ; no     ; --                   ; --               ; --                        ;
+; tick_5000:t|Equal0~3  ; LABCELL_X30_Y3_N6   ; 13      ; Sync. clear         ; no     ; --                   ; --               ; --                        ;
+; tick_5000:t|pulse     ; FF_X31_Y3_N53       ; 23      ; Clock, Clock enable ; no     ; --                   ; --               ; --                        ;
++-----------------------+---------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1616,7 +1616,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-----------------+----------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 ; Name                                                                            ; Type ; Mode ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF             ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
 +---------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-----------------+----------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; ROM:r|altsyncram:altsyncram_component|altsyncram_usf1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 1024         ; 10           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 10240 ; 1024                        ; 10                          ; --                          ; --                          ; 10240               ; 1           ; 0     ; ../rom_data.mif ; M10K_X38_Y3_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; ROM:r|altsyncram:altsyncram_component|altsyncram_usf1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 1024         ; 10           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 10240 ; 1024                        ; 10                          ; --                          ; --                          ; 10240               ; 1           ; 0     ; ../rom_data.mif ; M10K_X26_Y3_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
 +---------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-----------------+----------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1626,14 +1626,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 96 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 87 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 0 / 13,420 ( 0 % )     ;
-; C2 interconnects                            ; 23 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 8 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 4 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 6 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 19 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 34 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 1 / 16 ( 6 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1689,12 +1689,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 46 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 54 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 7 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 7 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 40 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 54 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 9 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 9 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 38 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 23 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )      ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1825,8 +1825,8 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 27.1              ;
-; CLOCK_50        ; CLOCK_50,I/O         ; 1.4               ;
+; CLOCK_50        ; CLOCK_50             ; 25.0              ;
+; CLOCK_50        ; CLOCK_50,I/O         ; 1.2               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1837,55 +1837,65 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------------+------------------------------------+-------------------+
 ; Source Register                    ; Destination Register               ; Delay Added in ns ;
 +------------------------------------+------------------------------------+-------------------+
-; tick_50000:t|count[13]             ; tick_50000:t|pulse                 ; 0.734             ;
-; tick_50000:t|count[12]             ; tick_50000:t|pulse                 ; 0.734             ;
-; tick_50000:t|count[7]              ; tick_50000:t|pulse                 ; 0.734             ;
-; tick_50000:t|count[5]              ; tick_50000:t|pulse                 ; 0.734             ;
-; tick_50000:t|count[11]             ; tick_50000:t|pulse                 ; 0.734             ;
-; tick_50000:t|count[4]              ; tick_50000:t|pulse                 ; 0.703             ;
-; tick_50000:t|count[15]             ; tick_50000:t|pulse                 ; 0.684             ;
-; tick_50000:t|count[14]             ; tick_50000:t|pulse                 ; 0.684             ;
-; tick_50000:t|count[9]              ; tick_50000:t|pulse                 ; 0.684             ;
-; tick_50000:t|count[8]              ; tick_50000:t|pulse                 ; 0.684             ;
-; tick_50000:t|count[6]              ; tick_50000:t|pulse                 ; 0.684             ;
-; tick_50000:t|count[10]             ; tick_50000:t|pulse                 ; 0.674             ;
-; counter_10:c|count[0]              ; counter_10:c|count[8]              ; 0.471             ;
-; pwm:p|count[0]                     ; pwm:p|count[9]                     ; 0.471             ;
-; spi2dac:s2d|shift_reg[13]          ; spi2dac:s2d|shift_reg[14]          ; 0.413             ;
-; spi2dac:s2d|state[2]               ; spi2dac:s2d|state[0]               ; 0.413             ;
-; spi2dac:s2d|ctr[2]                 ; spi2dac:s2d|clk_1MHz               ; 0.410             ;
-; spi2dac:s2d|ctr[3]                 ; spi2dac:s2d|clk_1MHz               ; 0.409             ;
-; spi2dac:s2d|state[1]               ; spi2dac:s2d|state[0]               ; 0.405             ;
-; spi2dac:s2d|state[0]               ; spi2dac:s2d|sr_state.WAIT_CSB_HIGH ; 0.389             ;
-; spi2dac:s2d|sr_state.WAIT_CSB_FALL ; spi2dac:s2d|shift_reg[15]          ; 0.378             ;
-; tick_50000:t|count[3]              ; tick_50000:t|pulse                 ; 0.376             ;
-; tick_50000:t|count[2]              ; tick_50000:t|pulse                 ; 0.376             ;
-; tick_50000:t|count[1]              ; tick_50000:t|pulse                 ; 0.376             ;
-; tick_50000:t|count[0]              ; tick_50000:t|pulse                 ; 0.376             ;
-; spi2dac:s2d|ctr[4]                 ; spi2dac:s2d|ctr[0]                 ; 0.367             ;
-; spi2dac:s2d|state[4]               ; spi2dac:s2d|sr_state.WAIT_CSB_HIGH ; 0.365             ;
-; spi2dac:s2d|clk_1MHz               ; spi2dac:s2d|tick                   ; 0.362             ;
-; spi2dac:s2d|ctr[0]                 ; spi2dac:s2d|ctr[3]                 ; 0.356             ;
-; spi2dac:s2d|ctr[1]                 ; spi2dac:s2d|ctr[3]                 ; 0.340             ;
-; spi2dac:s2d|sr_state.IDLE          ; spi2dac:s2d|sr_state.WAIT_CSB_FALL ; 0.328             ;
-; pwm:p|d[3]                         ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|d[2]                         ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|d[1]                         ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|d[0]                         ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|count[3]                     ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|count[2]                     ; pwm:p|pwm_out                      ; 0.322             ;
-; pwm:p|count[1]                     ; pwm:p|pwm_out                      ; 0.322             ;
-; spi2dac:s2d|state[3]               ; spi2dac:s2d|state[4]               ; 0.321             ;
-; spi2dac:s2d|sr_state.WAIT_CSB_HIGH ; spi2dac:s2d|sr_state.IDLE          ; 0.316             ;
-; tick_50000:t|pulse                 ; counter_10:c|count[9]              ; 0.314             ;
-; spi2dac:s2d|shift_reg[14]          ; spi2dac:s2d|shift_reg[15]          ; 0.302             ;
-; pwm:p|d[9]                         ; pwm:p|pwm_out                      ; 0.280             ;
-; pwm:p|d[8]                         ; pwm:p|pwm_out                      ; 0.280             ;
-; pwm:p|count[9]                     ; pwm:p|pwm_out                      ; 0.280             ;
-; pwm:p|count[8]                     ; pwm:p|pwm_out                      ; 0.280             ;
-; spi2dac:s2d|shift_reg[12]          ; spi2dac:s2d|shift_reg[13]          ; 0.258             ;
+; tick_5000:t|pulse                  ; spi2dac:s2d|sr_state.IDLE          ; 0.821             ;
+; tick_5000:t|count[14]              ; tick_5000:t|count[14]              ; 0.556             ;
+; tick_5000:t|count[15]              ; tick_5000:t|count[14]              ; 0.556             ;
+; tick_5000:t|count[13]              ; tick_5000:t|count[14]              ; 0.556             ;
+; tick_5000:t|count[6]               ; tick_5000:t|count[14]              ; 0.556             ;
+; tick_5000:t|count[5]               ; tick_5000:t|count[14]              ; 0.556             ;
+; tick_5000:t|count[4]               ; tick_5000:t|count[14]              ; 0.507             ;
+; tick_5000:t|count[11]              ; tick_5000:t|count[14]              ; 0.490             ;
+; tick_5000:t|count[12]              ; tick_5000:t|count[14]              ; 0.484             ;
+; tick_5000:t|count[9]               ; tick_5000:t|count[14]              ; 0.484             ;
+; tick_5000:t|count[8]               ; tick_5000:t|count[14]              ; 0.484             ;
+; tick_5000:t|count[7]               ; tick_5000:t|count[14]              ; 0.484             ;
+; tick_5000:t|count[3]               ; tick_5000:t|count[14]              ; 0.484             ;
+; pwm:p|count[0]                     ; pwm:p|count[9]                     ; 0.441             ;
+; counter_10:c|count[0]              ; counter_10:c|count[8]              ; 0.440             ;
+; tick_5000:t|count[10]              ; tick_5000:t|count[14]              ; 0.386             ;
+; tick_5000:t|count[2]               ; tick_5000:t|count[14]              ; 0.386             ;
+; tick_5000:t|count[1]               ; tick_5000:t|count[14]              ; 0.386             ;
+; tick_5000:t|count[0]               ; tick_5000:t|count[14]              ; 0.386             ;
+; spi2dac:s2d|ctr[2]                 ; spi2dac:s2d|clk_1MHz               ; 0.368             ;
+; spi2dac:s2d|ctr[0]                 ; spi2dac:s2d|ctr[2]                 ; 0.361             ;
+; spi2dac:s2d|ctr[1]                 ; spi2dac:s2d|ctr[3]                 ; 0.361             ;
+; spi2dac:s2d|state[2]               ; spi2dac:s2d|state[4]               ; 0.358             ;
+; spi2dac:s2d|ctr[3]                 ; spi2dac:s2d|clk_1MHz               ; 0.358             ;
+; spi2dac:s2d|state[1]               ; spi2dac:s2d|state[0]               ; 0.357             ;
+; spi2dac:s2d|state[0]               ; spi2dac:s2d|state[4]               ; 0.341             ;
+; spi2dac:s2d|ctr[4]                 ; spi2dac:s2d|ctr[2]                 ; 0.334             ;
+; spi2dac:s2d|clk_1MHz               ; spi2dac:s2d|tick                   ; 0.333             ;
+; spi2dac:s2d|state[4]               ; spi2dac:s2d|sr_state.WAIT_CSB_HIGH ; 0.316             ;
+; spi2dac:s2d|sr_state.IDLE          ; spi2dac:s2d|sr_state.WAIT_CSB_FALL ; 0.315             ;
+; pwm:p|d[3]                         ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|d[2]                         ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|d[1]                         ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|d[0]                         ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|count[3]                     ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|count[2]                     ; pwm:p|pwm_out                      ; 0.296             ;
+; pwm:p|count[1]                     ; pwm:p|pwm_out                      ; 0.296             ;
+; spi2dac:s2d|sr_state.WAIT_CSB_FALL ; spi2dac:s2d|sr_state.IDLE          ; 0.296             ;
+; pwm:p|d[5]                         ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|d[4]                         ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|d[7]                         ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|d[6]                         ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|count[7]                     ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|count[6]                     ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|count[5]                     ; pwm:p|pwm_out                      ; 0.277             ;
+; pwm:p|count[4]                     ; pwm:p|pwm_out                      ; 0.277             ;
+; spi2dac:s2d|sr_state.WAIT_CSB_HIGH ; spi2dac:s2d|sr_state.IDLE          ; 0.273             ;
+; spi2dac:s2d|shift_reg[13]          ; spi2dac:s2d|shift_reg[14]          ; 0.261             ;
+; spi2dac:s2d|shift_reg[11]          ; spi2dac:s2d|shift_reg[12]          ; 0.256             ;
+; spi2dac:s2d|shift_reg[14]          ; spi2dac:s2d|shift_reg[15]          ; 0.251             ;
+; spi2dac:s2d|shift_reg[12]          ; spi2dac:s2d|shift_reg[13]          ; 0.240             ;
+; spi2dac:s2d|state[3]               ; spi2dac:s2d|state[0]               ; 0.205             ;
+; spi2dac:s2d|tick                   ; spi2dac:s2d|shift_reg[15]          ; 0.075             ;
+; pwm:p|d[9]                         ; pwm:p|pwm_out                      ; 0.029             ;
+; pwm:p|d[8]                         ; pwm:p|pwm_out                      ; 0.029             ;
+; pwm:p|count[9]                     ; pwm:p|pwm_out                      ; 0.029             ;
+; pwm:p|count[8]                     ; pwm:p|pwm_out                      ; 0.029             ;
 +------------------------------------+------------------------------------+-------------------+
-Note: This table only shows the top 47 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 57 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1905,8 +1915,8 @@ Info (11191): Automatically promoted 1 clock (1 global)
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (332104): Reading SDC File: '../../clock.sdc'
-Warning (332060): Node: tick_50000:t|pulse was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register ROM:r|altsyncram:altsyncram_component|altsyncram_usf1:auto_generated|q_a[3] is being clocked by tick_50000:t|pulse
+Warning (332060): Node: tick_5000:t|pulse was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ROM:r|altsyncram:altsyncram_component|altsyncram_usf1:auto_generated|q_a[3] is being clocked by tick_5000:t|pulse
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
@@ -1991,12 +2001,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2005,10 +2015,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file H:/VERI/part_3/ex13/output_files/ex13_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 6879 megabytes
-    Info: Processing ended: Fri Nov 29 15:19:36 2019
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 6878 megabytes
+    Info: Processing ended: Mon Dec 09 15:52:23 2019
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:01:22
 
 
 +----------------------------+

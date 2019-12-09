@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex13_top
-Fri Nov 29 15:19:03 2019
+Mon Dec 09 15:51:49 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -54,7 +54,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 29 15:19:03 2019           ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 09 15:51:49 2019           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ex13_top                                        ;
 ; Top-level Entity Name           ; ex13_top                                        ;
@@ -199,7 +199,7 @@ refer to the applicable agreement for further details.
 ; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_usf1.tdf           ; yes             ; Auto-Generated Megafunction            ; H:/VERI/part_3/ex13/db/altsyncram_usf1.tdf                              ;         ;
-; rom_data.mif                     ; yes             ; Auto-Found Memory Initialization File  ; H:/VERI/part_3/ex13/rom_data.mif                                        ;         ;
+; ../rom_data.mif                  ; yes             ; Auto-Found Memory Initialization File  ; H:/VERI/part_3/ex13/rom_data.mif                                        ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -227,8 +227,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 77             ;
-; Total fan-out                               ; 597            ;
-; Average fan-out                             ; 3.09           ;
+; Total fan-out                               ; 598            ;
+; Average fan-out                             ; 3.10           ;
 +---------------------------------------------+----------------+
 
 
@@ -244,7 +244,7 @@ refer to the applicable agreement for further details.
 ;    |counter_10:c|                         ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |ex13_top|counter_10:c                                                         ; counter_10      ; work         ;
 ;    |pwm:p|                                ; 19 (19)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |ex13_top|pwm:p                                                                ; pwm             ; work         ;
 ;    |spi2dac:s2d|                          ; 25 (25)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |ex13_top|spi2dac:s2d                                                          ; spi2dac         ; work         ;
-;    |tick_50000:t|                         ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex13_top|tick_50000:t                                                         ; tick_50000      ; work         ;
+;    |tick_5000:t|                          ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |ex13_top|tick_5000:t                                                          ; tick_5000       ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -305,7 +305,7 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 77    ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -458,8 +458,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 77                          ;
 ;     ENA               ; 29                          ;
 ;     ENA SLD           ; 9                           ;
-;     SCLR              ; 10                          ;
-;     plain             ; 29                          ;
+;     SCLR              ; 11                          ;
+;     plain             ; 28                          ;
 ; arriav_lcell_comb     ; 76                          ;
 ;     arith             ; 34                          ;
 ;         1 data inputs ; 32                          ;
@@ -493,14 +493,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Nov 29 15:18:52 2019
+    Info: Processing started: Mon Dec 09 15:51:38 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex13 -c ex13_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
     Info (12023): Found entity 1: ROM File: H:/VERI/part_3/ex13/ROM.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file /veri/mylib/tick_5000.v
+Info (12021): Found 3 design units, including 3 entities, in source file /veri/mylib/tick_5000.v
     Info (12023): Found entity 1: tick_50000 File: H:/VERI/mylib/tick_5000.v Line: 1
+    Info (12023): Found entity 2: tick_5000 File: H:/VERI/mylib/tick_5000.v Line: 25
+    Info (12023): Found entity 3: tick_500 File: H:/VERI/mylib/tick_5000.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file /veri/mylib/spi2dac.v
     Info (12023): Found entity 1: spi2dac File: H:/VERI/mylib/spi2dac.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file /veri/mylib/pwm.v
@@ -510,8 +512,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file counter
 Info (12021): Found 1 design units, including 1 entities, in source file ex13_top.v
     Info (12023): Found entity 1: ex13_top File: H:/VERI/part_3/ex13/ex13_top.v Line: 1
 Info (12127): Elaborating entity "ex13_top" for the top level hierarchy
-Info (12128): Elaborating entity "tick_50000" for hierarchy "tick_50000:t" File: H:/VERI/part_3/ex13/ex13_top.v Line: 11
-Warning (10230): Verilog HDL assignment warning at tick_5000.v(20): truncated value with size 32 to match size of target (16) File: H:/VERI/mylib/tick_5000.v Line: 20
+Info (12128): Elaborating entity "tick_5000" for hierarchy "tick_5000:t" File: H:/VERI/part_3/ex13/ex13_top.v Line: 11
+Warning (10230): Verilog HDL assignment warning at tick_5000.v(44): truncated value with size 32 to match size of target (16) File: H:/VERI/mylib/tick_5000.v Line: 44
 Info (12128): Elaborating entity "counter_10" for hierarchy "counter_10:c" File: H:/VERI/part_3/ex13/ex13_top.v Line: 14
 Info (12128): Elaborating entity "ROM" for hierarchy "ROM:r" File: H:/VERI/part_3/ex13/ex13_top.v Line: 16
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:r|altsyncram:altsyncram_component" File: H:/VERI/part_3/ex13/ROM.v Line: 81
@@ -557,7 +559,7 @@ Info (21057): Implemented 120 device resources after synthesis - the final resou
     Info (21064): Implemented 10 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
     Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Fri Nov 29 15:19:03 2019
+    Info: Processing ended: Mon Dec 09 15:51:49 2019
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:18
 
